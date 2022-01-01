@@ -39,4 +39,8 @@ code {
   .subtitle2 {
     @apply font-sans font-normal text-2xl;
   }
+
+  .badge {
+    @apply font-sans font-bold text-sm;
+  }
 }
