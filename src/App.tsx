@@ -14,7 +14,7 @@ function App() {
         <Route path="/ranking" element={<Ranking />} />
       </Routes>
 
-      <Navigate to="/ranking" />
+      {/* <Navigate to="/ranking" /> */}
     </>
   )
 }

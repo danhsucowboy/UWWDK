@@ -16,9 +16,6 @@ module.exports = {
       podium: '#FFC347',
     },
     backgroundColor: (theme) => theme('colors'),
-    minHeight: {
-      14: '3.5rem',
-    },
     extend: {
       width: {
         21: '5.25rem',
@@ -30,6 +27,16 @@ module.exports = {
         42: '10.5rem',
         46: '11.5rem',
         54: '13.5rem',
+        136: '34rem',
+        217: '54.25rem',
+        232: '58rem',
+        240: '60rem',
+        250: '62.5rem',
+        260: '65rem',
+        280: '70rem',
+      },
+      minHeight: {
+        14: '3.5rem',
       },
       fontSize: {},
       lineHeight: {

@@ -1,9 +1,12 @@
 interface IProps {
   children?: any
+  height?: string
+  overflow?: string
 }
 
-const ContentWrapper = ({ children }: IProps) => {
-  return <div className="w-full h-screen bg-secondary text-center rounded-t-2xl overflow-y-auto">{children ?? ''}</div>
+const ContentWrapper = ({ children, height = 'h-screen', overflow = '' }: IProps) => {
+  const wrapper = `w-full ${height} bg-secondary text-center rounded-t-2xl ${overflow}`
+  return <div className={wrapper}>{children ?? ''}</div>
 }
 
 export default ContentWrapper

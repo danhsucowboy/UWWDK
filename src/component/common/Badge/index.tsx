@@ -1,14 +1,16 @@
 interface IBadge {
   score: number
   rank: number
+  position: string
 }
 
-const Badge = ({ score, rank }: IBadge) => {
+const Badge = ({ score, rank, position }: IBadge) => {
+  const badgeWrapper = `w-21 h-48 flex flex-col relative ${position}`
   return (
-    <div className="w-21 h-48 flex flex-col self-end relative">
+    <div className={badgeWrapper}>
       <div className="z-20 absolute w-7 h-7 rounded-full text-center bg-podium badge leading-7">{rank}</div>
       <div className="w-21 h-21 rounded-full bg-secondary border-4 border-solid border-tertiary z-10"></div>
-      <div className="w-full h-42 bg-tertiary absolute top-9 pt-14">
+      <div className="w-full h-39 bg-tertiary absolute top-9 pt-14">
         <span>
           <p>{score}</p>
           <p>CAP</p>
