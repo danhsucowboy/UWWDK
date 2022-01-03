@@ -7,16 +7,17 @@ module.exports = {
       tabletLarge: '1024px',
       desktop: '1280px',
     },
-    colors: {
-      primary: '#0E3C9E',
-      secondary: '#0D46B7',
-      tertiary: '#1d287a',
-      white: '#ffffff',
-      transparent: 'transparent',
-      podium: '#FFC347',
-    },
+
     backgroundColor: (theme) => theme('colors'),
     extend: {
+      colors: {
+        primary: '#0E3C9E',
+        secondary: '#0D46B7',
+        tertiary: '#1d287a',
+        white: '#ffffff',
+        transparent: 'transparent',
+        podium: '#FFC347',
+      },
       width: {
         21: '5.25rem',
       },
@@ -28,6 +29,7 @@ module.exports = {
         46: '11.5rem',
         54: '13.5rem',
         136: '34rem',
+        144: '36rem',
         217: '54.25rem',
         228: '57rem',
         232: '58rem',
