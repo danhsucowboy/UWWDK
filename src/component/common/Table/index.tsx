@@ -1,15 +1,7 @@
 import { useState, useMemo, useEffect } from 'react'
 import numeral from 'numeral'
-import mockAvatar from '../../../asset/img/oval.png'
 import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from 'react-feather'
-
-interface IRankings {
-  rankings: {
-    avatar: string
-    player: string
-    score: number
-  }[]
-}
+import IRankings from '../../utils/interface/IRankings'
 
 interface IData {
   rankings: {
@@ -57,7 +49,7 @@ const TableData = ({ rankings, currentPage }: IData) => {
             <td>{i + 4 + (currentPage - 1) * pageList}</td>
             <td className="w-4/5 h-full flex items-center">
               <div className="w-6 h-6 mr-2 rounded-full">
-                <img src={mockAvatar} alt="avator" />
+                <img src={r.avatar} alt="avator" />
               </div>
               {r.player}
             </td>
@@ -134,14 +126,14 @@ const Table = ({ rankings }: IRankings) => {
   const currentRankings = useMemo(() => {
     if (currentPage !== pages) return rankings.slice((currentPage - 1) * pageList, currentPage * pageList)
     else return rankings.slice((currentPage - 1) * pageList, rankings.length)
-  }, [currentPage])
+  }, [currentPage, rankings])
 
   const currentPages = useMemo(() => {
     const pageArrlen = pageArr.length < 3 ? pageArr.length : 3
     if (currentPage === 1) return pageArr.slice(0, pageArrlen)
     else if (currentPage === pages) return pageArr.slice(currentPage - pageArrlen, currentPage)
     else return pageArr.slice(currentPage - pageArrlen + 1, currentPage + 1)
-  }, [pageArr, currentPage])
+  }, [pageArr, currentPage, rankings])
 
   return (
     <table className="w-full h-144 rounded-2xl bg-tertiary border-4 border-solid border-[#2C217F99]">
