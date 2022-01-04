@@ -4,8 +4,7 @@ module.exports = {
     screens: {
       mobile: '375px',
       tablet: '768px',
-      tabletLarge: '1024px',
-      desktop: '1280px',
+      desktop: '1024px',
     },
 
     backgroundColor: (theme) => theme('colors'),
@@ -22,7 +21,7 @@ module.exports = {
         21: '5.25rem',
       },
       height: {
-        18: '4.5rem',
+        20: '5rem',
         21: '5.25rem',
         30: '7.5rem',
         39: '9.75rem',
@@ -45,6 +44,7 @@ module.exports = {
       fontSize: {},
       lineHeight: {
         14: '3.5rem',
+        16: '4rem',
         20: '5rem',
       },
       spacing: {

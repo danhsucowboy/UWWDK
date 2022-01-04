@@ -25,7 +25,7 @@ const TableHead = () => {
   return (
     <thead>
       <tr className="w-full h-14 subtitle3 leading-14">
-        <th>Rank</th>
+        <th className="desktop:w-20">Rank</th>
         <th className="text-left">Player</th>
         <th className="text-left">Score</th>
       </tr>
@@ -81,7 +81,7 @@ const TableFoot = ({ pages, currentPage, currentPages, setCurrentPage }: IFooter
     <tfoot>
       <tr className="h-14 subtitle3 leading-14">
         <td colSpan={3}>
-          <div className="flex w-full h-full justify-between items-center">
+          <div className="flex w-full tablet:w-2/3 desktop:w-1/2 tablet:mx-auto h-full justify-between items-center">
             <button className="basis-14" onClick={() => currentPage > 1 && handleChange(currentPage - 1)}>
               <ChevronLeft className="mx-auto"></ChevronLeft>
             </button>

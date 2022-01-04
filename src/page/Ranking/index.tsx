@@ -10,10 +10,10 @@ const Ranking = () => {
 
   return (
     <ContentWrapper overflow={'overflow-y-scroll'}>
-      <div className="w-full h-232">
+      <div className="w-full h-232 tablet:px-20 desktop:px-40">
         <p className="mt-4 w-full h-8 text-2xl leading-8">Total Players On Rank: {totalUsers}</p>
         <Podium rankings={mockRanking.slice(0, 3)} />
-        <div className="mt-4 w-full h-144 px-4">
+        <div className="mt-4 tablet:mt-8 w-full h-144 px-4 desktop:px-20">
           {/* <div className="w-full h-136 rounded-2xl bg-tertiary"> */}
           <Table rankings={mockRanking.slice(3, mockRanking.length)} />
           {/* </div> */}
