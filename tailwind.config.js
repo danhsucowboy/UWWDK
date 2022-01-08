@@ -16,9 +16,12 @@ module.exports = {
         white: '#ffffff',
         transparent: 'transparent',
         podium: '#FFC347',
+        blackDrop: 'rgba(0, 0, 0, 0.32)',
       },
       width: {
         21: '5.25rem',
+        75: '18.75rem',
+        90: '22.5rem',
       },
       height: {
         20: '5rem',
@@ -27,7 +30,9 @@ module.exports = {
         39: '9.75rem',
         42: '10.5rem',
         46: '11.5rem',
+        50: '12.5rem',
         54: '13.5rem',
+        60: '15rem',
         136: '34rem',
         144: '36rem',
         217: '54.25rem',

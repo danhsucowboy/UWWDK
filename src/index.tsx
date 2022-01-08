@@ -2,15 +2,23 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
+import { Provider } from 'react-redux'
+import { Web3ReactProvider } from '@web3-react/core'
 import reportWebVitals from './reportWebVitals'
 
 import { BrowserRouter } from 'react-router-dom'
+import store from './redux'
+import { getLibrary } from './utils/connectors'
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <Provider store={store}>
+      <Web3ReactProvider getLibrary={getLibrary}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </Web3ReactProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 )

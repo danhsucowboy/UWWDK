@@ -1,7 +1,7 @@
 import { useState, useMemo, useEffect } from 'react'
 import numeral from 'numeral'
 import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from 'react-feather'
-import IRankings from '../../utils/interface/IRankings'
+import IRankings from '../../../utils/interface/IRankings'
 
 interface IData {
   rankings: {

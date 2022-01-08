@@ -3,10 +3,22 @@ import ContentWrapper from '../../component/common/ContentWrapper'
 import Podium from '../../component/common/Podium'
 import useMockRanking from '../../hook/useMockRanking'
 import Table from '../../component/common/Table'
+import { useWeb3React } from '@web3-react/core'
+import { ChainId } from '../../utils/constants/blockchain'
+import { useNavigate } from 'react-router-dom'
 
 const Ranking = () => {
   const totalUsers = 99
   const mockRanking = useMockRanking(totalUsers)
+
+  const { account, chainId } = useWeb3React()
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (!account) {
+      navigate('/', { replace: true })
+    }
+  }, [account])
 
   return (
     <ContentWrapper overflow={'overflow-y-scroll'}>

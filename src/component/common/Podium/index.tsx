@@ -1,5 +1,5 @@
 import Badge from '../Badge'
-import IRankings from '../../utils/interface/IRankings'
+import IRankings from '../../../utils/interface/IRankings'
 interface IPodium {
   scores: number[]
   ranks: number[]
