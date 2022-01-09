@@ -1,12 +1,13 @@
 // import { combineReducers } from 'redux'
 import { configureStore, createAction } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query/react'
+import applicationReducer from './application/reducer'
 
 // const reducers = combineReducers({})
 
 const store = configureStore({
   reducer: {
-    // application,
+    application: applicationReducer,
     // transactions,
   },
 })
